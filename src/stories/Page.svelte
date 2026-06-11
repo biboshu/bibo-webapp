@@ -8,9 +8,15 @@
 <article>
   <Header
     {user}
-    onLogin={() => (user = { name: 'Jane Doe' })}
-    onLogout={() => (user = undefined)}
-    onCreateAccount={() => (user = { name: 'Jane Doe' })}
+    onLogin={(): void => {
+      user = { name: 'Jane Doe' };
+    }}
+    onLogout={(): void => {
+      user = undefined;
+    }}
+    onCreateAccount={(): void => {
+      user = { name: 'Jane Doe' };
+    }}
   />
 
   <section class="storybook-page">

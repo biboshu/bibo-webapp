@@ -2,5 +2,5 @@
  * @type {import('lint-staged').Configuration}
  */
 export default {
-	'*.{ts,js}': ['npm run lint']
+  '*.{ts,js}': ['pnpm run lint'],
 };
