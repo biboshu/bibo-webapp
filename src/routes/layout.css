@@ -1,0 +1,96 @@
+@font-face {
+	font-family: 'Nunito';
+	src:
+		url('$lib/assets/fonts/nunito.woff2') format('woff2'),
+		url('$lib/assets/fonts/nunito.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src:
+		url('$lib/assets/fonts/nunito-italic.woff2') format('woff2'),
+		url('$lib/assets/fonts/nunito-italic.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+@plugin 'daisyui' {
+	themes: false;
+}
+
+@plugin 'daisyui/theme' {
+	name: 'bibo';
+	default: true;
+	prefersdark: false;
+	color-scheme: 'light';
+	--color-base-100: oklch(99% 0.002 106);
+	--color-base-200: oklch(97.8% 0.003 106);
+	--color-base-300: oklch(94.5% 0.005 106);
+	--color-base-content: oklch(21.415% 0.033 253.047);
+	--color-primary: oklch(69.646% 0.12 160.411);
+	--color-primary-content: oklch(21.415% 0.033 253.047);
+	--color-secondary: oklch(90.444% 0.035 158.635);
+	--color-secondary-content: oklch(21.415% 0.033 253.047);
+	--color-accent: oklch(98.042% 0.013 63.925);
+	--color-accent-content: oklch(21.415% 0.033 253.047);
+	--color-neutral: oklch(21.415% 0.033 253.047);
+	--color-neutral-content: oklch(97.874% 0.009 161.356);
+	--color-info: oklch(70.928% 0.091 249.216);
+	--color-info-content: oklch(21.415% 0.033 253.047);
+	--color-success: oklch(65.687% 0.124 159.565);
+	--color-success-content: oklch(21.415% 0.033 253.047);
+	--color-warning: oklch(83.379% 0.125 66.878);
+	--color-warning-content: oklch(21.415% 0.033 253.047);
+	--color-error: oklch(63.782% 0.154 22.441);
+	--color-error-content: oklch(21.415% 0.033 253.047);
+	--radius-selector: 0.5rem;
+	--radius-field: 0.5rem;
+	--radius-box: 0.5rem;
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+	--border: 1px;
+	--depth: 0;
+	--noise: 0;
+}
+
+@plugin 'daisyui/theme' {
+	name: 'bibo-dark';
+	default: false;
+	prefersdark: true;
+	color-scheme: 'dark';
+	--color-base-100: oklch(21.415% 0.033 253.047);
+	--color-base-200: oklch(18.5% 0.028 253.047);
+	--color-base-300: oklch(15.5% 0.024 253.047);
+	--color-base-content: oklch(97.8% 0.003 106);
+	--color-primary: oklch(69.646% 0.12 160.411);
+	--color-primary-content: oklch(98.5% 0.002 106);
+	--color-secondary: oklch(44% 0.065 160.411);
+	--color-secondary-content: oklch(98.5% 0.002 106);
+	--color-accent: oklch(52% 0.115 178);
+	--color-accent-content: oklch(98.5% 0.002 106);
+	--color-neutral: oklch(14% 0.022 253.047);
+	--color-neutral-content: oklch(98.5% 0.002 106);
+	--color-info: oklch(70.928% 0.091 249.216);
+	--color-info-content: oklch(98.5% 0.002 106);
+	--color-success: oklch(65.687% 0.124 159.565);
+	--color-success-content: oklch(98.5% 0.002 106);
+	--color-warning: oklch(72% 0.125 66.878);
+	--color-warning-content: oklch(98.5% 0.002 106);
+	--color-error: oklch(63.782% 0.154 22.441);
+	--color-error-content: oklch(98.5% 0.002 106);
+	--radius-selector: 0.5rem;
+	--radius-field: 0.5rem;
+	--radius-box: 0.5rem;
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+	--border: 1px;
+	--depth: 0;
+	--noise: 0;
+}
