@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"build:tauri": "BUILD_TARGET=tauri vite build",
+		"build:tauri": "cross-env BUILD_TARGET=tauri vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync && npm run paraglide:compile && husky",
 		"precommit": "lint-staged",
@@ -49,6 +49,7 @@
 		"@types/pikaday": "^1.7.10",
 		"@vitest/browser-playwright": "^4.1.8",
 		"@vitest/coverage-v8": "^4.1.8",
+		"cross-env": "^10.1.0",
 		"daisyui": "^5.5.19",
 		"eslint": "^10.0.3",
 		"eslint-config-prettier": "^10.1.8",
