@@ -1,0 +1,19 @@
+name: Tag App
+
+on:
+  push:
+    tags: ['v*']
+
+jobs:
+  tag-app:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: biboshu/bibo-app
+          token: ${{ secrets.APP_REPO_TOKEN }}
+
+      - name: Create tag on app repo
+        run: |
+          git tag ${{ github.ref_name }}
+          git push origin ${{ github.ref_name }}
