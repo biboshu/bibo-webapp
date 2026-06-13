@@ -11,9 +11,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: biboshu/bibo-app
-          token: ${{ secrets.RELEASE_TOKEN }}
+          token: ${{ secrets.APP_REPO_TOKEN }}
 
-      - name: Create tag on app repo
+      - name: Trigger release on app repo
         run: |
-          git tag ${{ github.ref_name }}
-          git push origin ${{ github.ref_name }}
+          TAG=${{ github.ref_name || inputs.tag }}
+          VERSION=${TAG#v}
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "chore: release ${VERSION}" -m "Release-As: ${VERSION}"
+          git push origin main
