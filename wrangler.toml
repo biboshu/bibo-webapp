@@ -1,0 +1,4 @@
+name = "bibo-webapp"
+compatibility_date = "2026-06-13"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".svelte-kit/cloudflare"
